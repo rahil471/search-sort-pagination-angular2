@@ -1,0 +1,29 @@
+<header>
+  <nav class="navbar navbar-default">
+    <a class="navbar-brand" href="#">Ma Games</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="row">
+    <nav class="navbar">
+      <input class="form-control" type="text" name="search" [(ngModel)]="filter">      
+    </nav>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Genre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let game of games | filter:filter; let i = index">
+          <td>{{i}}</td>
+          <td>{{game.name}}</td>
+          <td>{{game.genre}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
