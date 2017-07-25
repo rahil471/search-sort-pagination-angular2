@@ -55,5 +55,13 @@ export class AppComponent {
       "name": "Witcher Assasins on King",
       "genre": "Adventure"
     }
-  ]
+  ];
+
+  //sorting
+  key: string = 'name';
+  reverse: boolean = false;
+  sort(key){
+    this.key = key;
+    this.reverse = !this.reverse;
+  }
 }

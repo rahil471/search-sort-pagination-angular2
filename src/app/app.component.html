@@ -13,12 +13,16 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Name</th>
-          <th>Genre</th>
+          <th (click)="sort('name')">Name
+            <span class="glyphicon sort-icon" *ngIf="key =='name'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th (click)="sort('genre')">Genre
+            <span class="glyphicon sort-icon" *ngIf="key =='genre'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let game of games | filter:filter; let i = index">
+        <tr *ngFor="let game of games | orderBy: key : reverse | filter:filter; let i = index">
           <td>{{i}}</td>
           <td>{{game.name}}</td>
           <td>{{game.genre}}</td>
