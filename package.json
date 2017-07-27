@@ -24,6 +24,7 @@
     "core-js": "^2.4.1",
     "ng2-order-pipe": "^0.1.5",
     "ng2-search-filter": "^0.3.1",
+    "ngx-pagination": "^3.0.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },

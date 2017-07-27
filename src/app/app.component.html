@@ -22,12 +22,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let game of games | orderBy: key : reverse | filter:filter; let i = index">
+        <tr *ngFor="let game of games | orderBy: key : reverse | filter:filter | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
           <td>{{i}}</td>
           <td>{{game.name}}</td>
           <td>{{game.genre}}</td>
         </tr>
       </tbody>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </table>
   </div>
 </div>

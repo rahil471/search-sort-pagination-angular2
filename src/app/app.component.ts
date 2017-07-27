@@ -52,7 +52,7 @@ export class AppComponent {
       "genre": "Sport"
     },{
       "id":"10",
-      "name": "Witcher Assasins on King",
+      "name": "Witcher Assassins on King",
       "genre": "Adventure"
     }
   ];
@@ -64,4 +64,5 @@ export class AppComponent {
     this.key = key;
     this.reverse = !this.reverse;
   }
+  p: number = 1;
 }
